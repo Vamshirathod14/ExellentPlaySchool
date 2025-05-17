@@ -1,0 +1,512 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellent Play School - Mahabubnagar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --accent-color: #ffe66d;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f9f7f7;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .welcome-marquee {
+            background-color: var(--accent-color);
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .school-name {
+            color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .enroll-btn {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            animation: pulse 2s infinite;
+        }
+        
+        .facility-card {
+            transition: transform 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .site-footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffe66d;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .footer-description {
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-contact {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links-title {
+            color: #ffe66d;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4ecdc4;
+            display: inline-block;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #4ecdc4;
+            padding-left: 5px;
+        }
+        
+        .school-hours {
+            margin-top: 20px;
+        }
+        
+        .school-hours p {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #4ecdc4;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        
+        .developer-credit {
+            color: #ffe66d;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Contact Form Styles */
+        .contact-form-card {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: none;
+        }
+        
+        .contact-form-card .card-header {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: bold;
+            border-radius: 15px 15px 0 0 !important;
+        }
+        
+        .contact-form-card .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .contact-form-card .btn-primary:hover {
+            background-color: #e05555;
+            border-color: #e05555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">EXCELLENT PLAY SCHOOL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Marquee -->
+    <div class="welcome-marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            🎉 Welcome to Excellent Play School - Admissions Open for 2025-2026! Limited Seats Available! 🎉
+        </marquee>
+    </div>
+
+    <!-- Hero Carousel -->
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Kids playing">
+                <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
+                    <h2 class="display-4">The Right Place to Explore & Discover</h2>
+                    <p class="lead">Where learning meets fun!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Classroom">
+                <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
+                    <h2 class="display-4">Nurturing Young Minds</h2>
+                    <p class="lead">For Nursery, LKG & UKG</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="School bus">
+                <div class="carousel-caption d-none d-md-block animate__animated animate__fadeIn">
+                    <h2 class="display-4">Transport Facility Available</h2>
+                    <p class="lead">Safe and reliable transportation</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- About Section -->
+        <section id="about" class="my-5 py-4 animate__animated animate__fadeIn">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="school-name display-4 fw-bold">Excellent Play School</h2>
+                    <p class="lead">Opp Govt. Hospital, Gangaram Road, Maheshwaram Village & Mandal, R.R. Dist, Telangana</p>
+                    <p>We provide a safe, nurturing environment where children can explore, discover, and grow. Our play-based learning approach helps develop cognitive, social, emotional, and physical skills in young children.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded shadow" alt="School building">
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="my-5 py-4 bg-light rounded-3 p-4 animate__animated animate__fadeIn">
+            <h2 class="text-center mb-4 school-name">Our Programs</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card facility-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Nursery</h3>
+                            <p class="card-text">For ages 2.5-3.5 years. Our nursery program focuses on sensory development, basic language skills, and social interaction.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card facility-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">LKG</h3>
+                            <p class="card-text">For ages 3.5-4.5 years. Our LKG program introduces foundational academic concepts through play and exploration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card facility-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">UKG</h3>
+                            <p class="card-text">For ages 4.5-5.5 years. Our UKG program prepares children for primary school with structured learning activities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <h3 class="text-danger">ADMISSIONS OPEN FOR 2025-2026</h3>
+                <p class="fw-bold">Limited Seats Available - Enroll Now!</p>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="facilities" class="my-5 py-4 animate__animated animate__fadeIn">
+            <h2 class="text-center mb-4 school-name">Our Facilities</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card facility-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Play-Based Learning</h3>
+                            <p class="card-text">We believe children learn best through play. Our curriculum is designed to make learning fun and engaging.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card facility-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Transport Facility</h3>
+                            <p class="card-text">Safe and reliable transportation available for students. Our buses are equipped with safety measures and trained staff.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card facility-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Qualified Teachers</h3>
+                            <p class="card-text">Our caring and experienced teachers are trained in early childhood education and child development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card facility-card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Safe Environment</h3>
+                            <p class="card-text">Child-safe infrastructure with CCTV surveillance, clean facilities, and age-appropriate learning materials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section with Form -->
+        <section id="contact" class="my-5 py-4 animate__animated animate__fadeIn">
+            <h2 class="text-center mb-4 school-name">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Visit Us</h3>
+                            <p class="card-text">
+                                Excellent Play School<br>
+                                Opp Govt. Hospital, Gangaram Road<br>
+                                Maheshwaram Village & Mandal<br>
+                                R.R. District, Telangana
+                            </p>
+                            <h3 class="card-title mt-4">Call Us</h3>
+                            <p class="card-text">
+                                <i class="fas fa-phone me-2"></i> 6309067047<br>
+                                <i class="fas fa-phone me-2"></i> 9553747047
+                            </p>
+                            <h3 class="card-title mt-4">Email Us</h3>
+                            <p class="card-text">
+                                <i class="fas fa-envelope me-2"></i> info@excellentplayschool.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card contact-form-card h-100">
+                        <div class="card-header">
+                            <h3 class="card-title mb-0">Quick Contact Form</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </form>
+                            <div id="formMessage" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="my-5 py-5 text-center bg-primary text-white rounded-3 animate__animated animate__pulse">
+            <h2 class="display-4 fw-bold">ENROLL NOW!</h2>
+            <p class="lead">Give your child the best start in their educational journey</p>
+            <div class="d-flex justify-content-center align-items-center bounce">
+                <h3 class="me-3">LEARN PLAY</h3>
+                <i class="fas fa-child fa-3x"></i>
+            </div>
+            <a href="#contact" class="btn btn-light btn-lg mt-3 enroll-btn">Contact Us Today</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="#" class="footer-brand">Excellent Play School</a>
+                    <p class="footer-description">
+                        The right place for kids to explore & discover.
+                    </p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Opp. Govt. Hospital, Gangaram Road, Maheshwaram</p>
+                        <p><i class="fas fa-phone me-2"></i> 6309067047, 9553747047</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h3 class="footer-links-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right me-2"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right me-2"></i> About Us</a></li>
+                        <li><a href="#programs"><i class="fas fa-chevron-right me-2"></i> Programs</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right me-2"></i> Gallery</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right me-2"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h3 class="footer-links-title">School Hours</h3>
+                    <div class="school-hours">
+                        <p><strong>Monday - Friday:</strong></p>
+                        <p>8:30 AM - 3:30 PM</p>
+                        <p><strong>Saturday:</strong></p>
+                        <p>8:30 AM - 12:30 PM</p>
+                        <p><strong>Sunday:</strong></p>
+                        <p>Closed</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h3 class="footer-links-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/vamshi_nayak_13?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="mb-0">© <span id="current-year">2025</span> Excellent Play School. All rights reserved.</p>
+                <p class="mb-0 developer-credit">Developed by Vamshi</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const messageDiv = document.getElementById('formMessage');
+
+            try {
+                const response = await fetch('http://localhost:5000/api/contacts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, phone })
+                });
+
+                if (response.ok) {
+                    messageDiv.innerHTML = '<div class="alert alert-success">Thank you! We will contact you soon.</div>';
+                    document.getElementById('contactForm').reset();
+                } else {
+                    messageDiv.innerHTML = '<div class="alert alert-danger">Failed to submit. Please try again.</div>';
+                }
+            } catch (error) {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Network error. Please try again later.</div>';
+            }
+        });
+
+        // Initialize carousel with animation
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = document.querySelector('#homeCarousel');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 3000,
+                pause: 'hover'
+            });
+            
+            // Add animation to carousel items when they slide in
+            myCarousel.addEventListener('slide.bs.carousel', function (e) {
+                var nextSlide = e.relatedTarget;
+                var nextSlideCaption = nextSlide.querySelector('.carousel-caption');
+                nextSlideCaption.classList.add('animate__animated', 'animate__fadeIn');
+            });
+            
+            // Remove animation class after animation completes to allow re-animation
+            myCarousel.addEventListener('slid.bs.carousel', function (e) {
+                var activeSlide = e.relatedTarget;
+                var activeCaption = activeSlide.querySelector('.carousel-caption');
+                setTimeout(function() {
+                    activeCaption.classList.remove('animate__animated', 'animate__fadeIn');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
