@@ -10,7 +10,7 @@ function App() {
     const fetchContacts = async () => {
         setLoading(true);
         try {
-            const res = await axios.get('http://localhost:5000/api/contacts');
+            const res = await axios.get('https://exellentplayschool.onrender.com/api/contacts');
             setContacts(res.data);
         } catch (error) {
             console.error("Error fetching contacts:", error);
@@ -22,7 +22,7 @@ function App() {
     // Delete a contact
     const deleteContact = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+            await axios.delete(`https://exellentplayschool.onrender.com/api/contacts/${id}`);
             fetchContacts(); // Refresh list
         } catch (error) {
             console.error("Error deleting contact:", error);
